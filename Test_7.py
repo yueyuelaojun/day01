@@ -16,3 +16,19 @@ for d in data:
     if len(d) < 100:
         new.append(d)
 print('一共有', len(new), '笔留言长度小于100')
+
+good = []
+for d in data:
+    if 'good' in d:
+        good.append(d)
+print('一共有', len(good), '笔记录提到GOOD!')
+
+good_1 = [d for d in data if 'good' in d]
+print('一共有', len(good_1), '笔记录提到GOOD!')
+
+bad = ['bad' in d for d in data]
+print(bad)
+#正规的写法
+#bad = []
+#for d in data:
+#    bad.append('bad' in d)
